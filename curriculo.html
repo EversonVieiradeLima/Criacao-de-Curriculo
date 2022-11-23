@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" type="text/css" href="curriculo.css">
+        <script src="tipoEscolaridade.js" defer></script>
+        <script type="text/javascript" src="curriculo.js" defer></script>
+        <title>Currículo</title>
+    </head>
+    <body>
+
+        <header>
+            <div id="photo" class="photo">
+                <label class="picture" tabindex="0">
+                    <input type="file" accept="image/*" id="picture__input" />
+                    <span class="picture__image"></span>
+                </label>
+            </div>
+            <div class="fullName">
+                <h1 class="nomeCompleto"></h1>
+            </div>
+        </header>
+
+        <main>
+
+            <div class="topico1">
+
+                <div class="conteudo">
+
+                    <div class="ladoEsquerdo">
+
+                        <div id="nacionalidade">
+                        </div>
+
+                        <div id="idade">
+                        </div>
+
+                        <div id="celular1">
+                            <div id="numero1">
+                            </div>
+                        </div>
+
+                        <div id="celular2">
+                            <div id="numero2">
+                            </div>
+                        </div>
+
+                        <div id="empregado">   
+                        </div>
+
+                        <div id="habilitacao">
+                        </div>
+                        
+                        <div id="automovel">
+                        </div>
+    
+                    </div>
+
+                    <div class="ladoDireito">
+
+                        <div id="endereco">
+                        </div>
+
+                        <div id="bairro">
+                        </div>
+
+                        <div id="conjunto_localizacao">
+                            <div id="cep">
+                            </div>
+    
+                            <div id="cidade">
+                            </div>
+    
+                            <div id="estado">
+                            </div>
+                        </div>
+
+                        <div id="email">
+                        </div>
+
+                        <div id="linkedin">
+                        </div>
+
+                        <div id="viagem">
+                        </div>
+
+                        <div id="mudarSe">
+                        </div>
+                        
+                    </div>
+
+                </div>
+
+                <div class="resumo_objetivos">
+
+                    <div id="resumo">
+                    </div>
+
+                    <div id="objetivos">
+                    </div>
+
+                </div>
+
+                <div class="formacao">
+
+                    <div id="escolaridade">
+                    </div>
+
+                    <div id="curso">
+                    </div>
+
+                    <div id="semestre">
+                    </div>
+
+                    <div id="instituicao">
+                    </div>
+
+                    <div id="duracao">
+                    </div>
+
+                    <div id="anoConclusao">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </main>
+
+        <footer>
+            <input type="button" id="inputButton2" class="inputButton2" value="Visualizar currículo">
+            <button id="imprimir" class="imprimir" onclick="botaoimprimir();window.print()">Imprimir / Salvar PDF</button>
+
+            <p id="atencao">Atenção: Clique em "Imprimir / Salvar PDF" para visualizar como seu currículo ficará realmente!</p>
+        </footer>
+        
+    </body>
+</html>

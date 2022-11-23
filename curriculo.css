@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+}
+
+header{
+    display: flex;
+    align-items: flex-end;
+    margin: 35px 10px 50px 10px;
+}
+
+.picture {
+    width: 180px;
+    height: 236px;
+    background: rgb(248, 248, 248);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+    cursor: pointer;
+    font-family: sans-serif;
+    transition: color 300ms ease-in-out, background 300ms ease-in-out;
+    margin-right: 60px;
+    border-radius: 20px;
+
+}
+
+.picture:hover {
+    color: #777;
+    background: #ccc;
+}
+
+.picture:active {
+    border-color: turquoise;
+    color: #aaa;
+    background: #ddd;
+}
+
+.picture:focus {
+    color: #777;
+    background: #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 3);
+}
+
+.picture__img {
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 20px;
+}
+
+#picture__input {
+    display: none;
+}
+
+.fullName {
+    font-family: sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+main {
+    margin: 0px 5px 0px 5px;
+    font-family: sans-serif;
+}
+
+/* .title {
+    margin-bottom: 20px;
+    font-weight: bold;
+} */
+
+.conteudo {
+    display: flex;
+    justify-content: space-around;
+}
+
+.ladoEsquerdo div, .ladoDireito div {
+    display: flex;
+    margin-bottom: 15px;
+}
+
+/* .ladoDireito div {
+    display: flex;
+    margin-bottom: 15px;
+} */
+
+.option {
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+/* .espaco {
+    margin-right: 4px;
+} */
+
+/* .optionEstado {
+    font-weight: bold;
+} */
+
+#nacionalidade, #idade, #endereco, #bairro, #cep, #cidade, #estado {
+    display: inline-block;
+}
+
+#nacionalidade, #endereco {
+    margin-right: -5px;
+}
+
+#idade .option, #bairro .option {
+    font-weight: normal;
+}
+
+#idade .option, #idade .idade, #bairro .option, #bairro .bairro, #cep p, #cidade .option, #cidade .cidade, #estado .option, #estado .estado {
+    display: inline-block;
+}
+
+#conjunto_localizacao, #celular1, #celular2 {
+    margin-bottom: 0;
+}
+
+#cidade .option, #estado .option {
+    margin: 0 5px 0 5px;
+}
+
+#resumo .option, #objetivos .option {
+    margin: 1em 0;
+    font-size: 20px;
+}
+
+.resumo, .objetivos {
+    margin: 0 0 1em 0;
+}
+
+#escolaridade .option {
+    font-size: 20px;
+    margin: 0 0 1em 0;
+}
+
+#curso, #semestre, #instituicao, #duracao, #anoConclusao {
+    display: flex;
+    margin: 15px 0 0 0;
+}
+
+footer {
+    margin-bottom: 3em;
+    text-align: center;
+}
+
+.inputButton2 {
+    margin-right: 6em;
+}
+
+.inputButton2, .imprimir {
+    padding: 1em;
+    font-weight: bold;
+    background: #f6ae2d;
+    border: none;
+    border-radius: 5px;
+    transition: background .3s;
+}
+
+.inputButton2:hover, .imprimir:hover {
+    cursor: pointer;
+    background: #f89512;
+}
+
+footer p {
+    text-transform: uppercase;
+    font-weight: bold;
+    background: red;
+    border-radius: 5px;
+    margin: 2em 14em 0 14em;
+    padding: 10px 0;
+}

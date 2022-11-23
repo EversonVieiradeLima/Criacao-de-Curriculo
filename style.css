@@ -1,0 +1,262 @@
+body {
+    background: #070d19;
+    color: white;
+}
+
+::-webkit-scrollbar {
+    width: 15px;
+    background-color: #000511;
+}
+
+::-webkit-scrollbar-button {
+    background: #14171f;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffbe0b;
+    border-radius: 20px;
+}
+
+/* ::-webkit-scrollbar-thumb:hover {
+    cursor: pointer;
+} */
+
+.topo {
+    background-color: #ffbe0b;
+    padding: 5px 0 5px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    background-image: linear-gradient(to bottom, #000511, #070d19 12%);
+    border-radius: 5px;
+}
+
+.logo img {
+    height: 150px;
+    margin: 0 0 0 30px;
+    /* filter: opacity(0.4) drop-shadow(0 0 0 white); */
+}
+
+.logo h2 {
+    font-size: 30px;
+}
+
+main {
+    margin: 2% 19% 0;
+    padding: 5% 1%;
+    background-color: #14171f;
+    border-radius: 6px 6px 0 0;
+}
+
+input {
+    height: 15px;
+    border: 2px solid #ffbe0b;
+    border-radius: 7px;
+    background: none;
+    color: white;
+    outline: none;
+    padding: 2px;
+}
+
+.dados, .formacaoEConhecimentos, .objetivosEExperiencias {
+    margin-bottom: 55px;
+}
+
+.topicos {
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 45px;
+}
+
+.topicos img {
+    height: 100px;
+    background-color: #ffbe0b;
+    border-radius: 20%;
+    margin-right: 10px;
+}
+
+.topicos h2 {
+    font-weight: bold;
+    font-size: 30px;
+    margin-right: 39%;
+}
+
+.camposObrigatorios {
+    display: flex;
+    font-size: 13px;
+}
+
+.nomeCompleto, .nacionalidade, .celular1, .celular2, .linhaCelular1, .linhaCelular2, .idade, .endereco, .bairro, .cep, .estado, .cidade, .email, .listaRedes, .informacoes, .escolaridade, .curso, .semestre, .instituicao, .duracao, .conclusao, .cursoEvento, .instituicaoCurso, .duracaoCurso, .conclusaoCurso {
+    display: flex;
+    margin-bottom: 6px;
+}
+
+.inputNome, .inputEndereco, #inputEscolaridade, .inputInstituicaoCurso {
+    width: 300px;
+}
+
+.inputNacionalidade {
+    width: 150px;
+}
+
+.linhaDeConteudo {
+    display: flex;
+    margin-right: 15px;
+}
+
+input[type=number]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.inputNumero1, .inputNumero2 {
+    width: 100px;
+}
+
+.inputIdade {
+    width: 50px;
+}
+
+.informacoes input {
+    width: 50px;
+}
+
+.idade b,.endereco b, .semestre b, .duracao b, .conclusao b {
+    font-size: 11px;
+    color: rgb(112, 112, 112);
+}
+
+.inputCep {
+    width: 63px;
+}
+
+#inputEstado {
+    width: 40px;
+}
+
+.inputCidade, .inputCursoEvento {
+    width: 200px;
+}
+
+.email, .redesSociais, .formacao, .cursos, .objetivosProfissionais {
+    margin-bottom: 37px;
+}
+
+.inputEmail {
+    width: 250px;
+}
+
+.tema {
+    margin-bottom: 13px;
+}
+
+.redes, .listaDeInformacoes {
+    margin-left: 40px;
+}
+
+.listaRedes input {
+    width: 400px;
+}
+
+#inputHabilitacao, #inputAutomovel {
+    width: 85px;
+}
+
+.formacaoEConhecimentos .topicos {
+    margin-bottom: 5px;
+}
+
+.formacaoEConhecimentos .topicos h2 {
+    margin-right: 20%;
+}
+
+.informacao {
+    margin-bottom: 45px;
+}
+
+.inputCurso {
+    width: 350px;
+}
+
+.inputSemestre {
+    width: 30px;
+}
+
+.inputInstituicao {
+    width: 430px;
+}
+
+.inputDuracao, .inputDuracaoCurso {
+    width: 60px;
+}
+
+.inputConclusao, .inputconclusaoCurso {
+    width: 32px;
+}
+
+.cursos {
+    margin-bottom: 10px;
+}
+
+.miniCurriculo label, .objetivosProfissionais label {
+    display: block;
+}
+
+.textarea_padrao {
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 20px;
+    width: 80%;
+    resize: none;
+    font-family: sans-serif;
+    border-radius: 5px;
+    border: 2px solid #ffbe0b;
+    background: none;
+    color: white;
+    outline: none;
+}
+
+footer {
+    text-align: center;
+    background: #14171f;
+    padding-bottom: 2em;
+    margin: 0 19% 2% 19%;
+    border-radius: 0 0 6px 6px;
+}
+
+.inputButton {
+    height: 20px;
+    font-weight: bold;
+    background: #ffbe0b;
+    color: black;
+    margin-right: 4em;
+    padding: 1em;
+    padding-bottom: 28px;
+    border: none;
+    transition: background .3s;
+}
+
+.inputButton:hover, #visualizarCurriculo:hover {
+    cursor: pointer;
+    background: #fba300;
+}
+
+.inputButton:active, #visualizarCurriculo:active {
+    background:  #070d19;
+    color: white;
+}
+
+#visualizarCurriculo {
+    border-radius: 7px;
+    font-weight: bold;
+    background: #ffbe0b;
+    padding: 1em;
+    border: none;
+    transition: background .3s;
+}
+
+#visualizarCurriculo a {
+    color: black;
+    text-decoration: none;
+}

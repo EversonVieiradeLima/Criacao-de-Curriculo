@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="reset.css" />
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="tipoEscolaridade.js" defer></script>
+        <script type="text/javascript" src="script.js" defer></script>
+        <title>Meu Currículo</title>
+    </head>
+    <body>
+        <header>
+            <div class="topo">
+                <div class="logo">
+                    <img src="https://cdn-user-icons.flaticon.com/76385/76385359/1666016096387.svg?token=exp=1666017349~hmac=c05fe13de0db86839f83319b011e05b8">
+                    <h2>Seu Currículo em Destaque</h2>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <form class="formulario" autocomplete="off">
+
+                <div class="dados">
+
+                    <div class="topicos">
+                        <img src="https://cdn-icons-png.flaticon.com/128/3106/3106921.png">
+                        <h2>Dados Pessoais</h2>
+                        <div class="camposObrigatorios">
+                            <b style="color: red;">*</b>
+                            <b style="font-style: italic;">Campos obrigatórios</b>
+                        </div>
+                    </div>
+
+                    <div class="conteudo">
+
+                        <div class="nomeCompleto">
+
+                            <div class="linhaDeConteudo">
+
+                                <label for="inputNome">Nome completo:</label>
+                                <label for="inputNome" style="color: red;">*</label>
+
+                            </div>
+
+                            <input type="text" id="inputNome" class="inputNome" onkeypress="EnterTab('inputNacionalidade')" autocomplete="off" autofocus />
+
+                        </div>
+
+                        <div class="nacionalidade">
+
+                            <div class="linhaDeConteudo">
+
+                                <label for="inputNacionalidade">Nacionalidade:</label>
+
+                            </div>
+
+                            <input type="text" id="inputNacionalidade" class="inputNacionalidade" onkeypress="EnterTab('inputNumero1')" autocomplete="off" />
+
+                        </div>
+
+                        <div class="celular1">
+
+                            <div class="linhaDeConteudo">
+
+                                <label for="inputNumero1">Celular 1:</label>
+                                <label for="inputNumero1" style="color: red;">*</label>
+
+                            </div>
+
+                            <div class="linhaCelular1">
+
+                                <input type="text" name="telefone" id="inputNumero1" class="inputNumero1" onkeypress="mascaraTelefone(this);EnterTab('inputNumero2')" autocomplete="off" />
+
+                            </div>
+
+                        </div>
+
+                        <div class="celular2">
+
+                            <div class="linhaDeConteudo">
+
+                                <label for="inputNumero2">Celular 2:</label>
+
+                            </div>
+
+                            <div class="linhaCelular2">
+
+                                <input type="text" name="telefone" id="inputNumero2" class="inputNumero2" onkeypress="mascaraTelefone(this);EnterTab('inputIdade')" autocomplete="off" />
+
+                            </div>
+
+                        </div>
+
+                        <div class="idade">
+
+                            <div class="linhaDeConteudo">
+
+                                <label for="inputIdade">Idade:</label>
+                                <label for="inputIdade" style="color: red;">*</label>
+
+                            </div>
+
+                            <input type="text" name="idade" id="inputIdade" class="inputIdade" onkeypress="mascaraIdade(this);EnterTab('inputEndereco')" autocomplete="off" />
+                            <b style="font-style: italic;">Ex: 20 anos, 30 anos, 40 anos</b>
+
+                        </div>
+
+                        <div class="endereco">
+
+                            <div class="linhaDeConteudo">
+
+                                <label for="inputEndereco">Endereço residencial:</label>
+                                <label for="inputEndereco" style="color: red;">*</label>
+
+                            </div>
+
+                            <input type="text" id="inputEndereco" class="inputEndereco" onkeypress="EnterTab('inputBairro')" autocomplete="off" />
+                            <b style="font-style: italic;">Ex: Rua Fulano Silva, nº 1000, apto 701</b>
+
+                        </div>
+
+                        <div class="bairro">
+
+                            <div class="linhaDeConteudo">
+
+                                <label for="inputBairro">Bairro:</label>
+                                <label for="inputBairro" style="color: red;">*</label>
+
+                            </div>
+
+                            <input type="text" id="inputBairro" class="inputBairro" onkeypress="EnterTab('inputCep')" autocomplete="off" />
+
+                        </div>
+
+                        <div class="cep">
+
+                            <div class="linhaDeConteudo">
+
+                                <label for="inputCep">CEP:</label>
+                                <label for="inputCep" style="color: red;">*</label>
+
+                            </div>
+
+                            <input type="text" name="cep" id="inputCep" class="inputCep" onkeypress="mascaraCep(this);EnterTab('inputEstado')" autocomplete="off" />
+                            <!-- <p>-</p>
+                            <input type="number" id="inputContCep" class="inputContCep" autocomplete="off" /> -->
+
+                        </div>
+
+                        <div class="estado">
+
+                            <div class="linhaDeConteudo">
+
+                                <label for="inputEstado">Estado:</label>
+                                <label for="inputEstado" style="color: red;">*</label>
+
+                            </div>
+
+                            <input list="estados" id="inputEstado" name="inputEstado" onkeypress="EnterTab('inputCidade')" autocomplete="off" />
+                            <datalist id="estados">
+
+                                <option value="AC">Acre</option>
+                                <option value="AL">Alagoas</option>
+                                <option value="AP">Amapá</option>
+                                <option value="AM">Amazonas</option>
+                                <option value="BA">Bahia</option>
+                                <option value="CE">Ceará</option>
+                                <option value="DF">Distrito Federal</option>
+                                <option value="ES">Espírito Santo</option>
+                                <option value="GO">Goiás</option>
+                                <option value="MA">Maranhão</option>
+                                <option value="MT">Mato Grosso</option>
+                                <option value="MS">Mato Grosso do Sul</option>
+                                <option value="MG">Minas Gerais</option>
+                                <option value="PA">Pará</option>
+                                <option value="PB">Paraíba</option>
+                                <option value="PR">Paraná</option>
+                                <option value="PE">Pernambuco</option>
+                                <option value="PI">Piauí</option>
+                                <option value="RJ">Rio de Janeiro</option>
+                                <option value="RN">Rio Grande do Norte</option>
+                                <option value="RS">Rio Grande do Sul</option>
+                                <option value="RO">Rondônia</option>
+                                <option value="RR">Roraima</option>
+                                <option value="SC">Santa Catarina</option>
+                                <option value="SP">São Paulo</option>
+                                <option value="SE">Sergipe</option>
+                                <option value="TO">Tocantins</option>
+
+                            </datalist>
+
+                        </div>
+
+                        <div class="cidade">
+
+                            <div class="linhaDeConteudo">
+
+                                <label for="inputCidade">Cidade:</label>
+                                <label for="inputCidade" style="color: red;">*</label>
+
+                            </div>
+
+                            <input type="text" id="inputCidade" class="inputCidade" onkeypress="EnterTab('inputEmail')" autocomplete="off" />
+
+                        </div>
+
+                        <div class="email">
+
+                            <div class="linhaDeConteudo">
+
+                                <label for="inputEmail">E-mail:</label>
+                                <label for="inputEmail" style="color: red;">*</label>
+
+                            </div>
+
+                            <input type="email" id="inputEmail" class="inputEmail" onkeypress="EnterTab('inputLinkedin')" autocomplete="off" />
+
+                        </div>
+
+                        <div class="redesSociais">
+
+                            <p style="font-weight: bold;" class="tema">Redes sociais</p>
+                            <div class="redes">
+
+                                <div class="listaRedes">
+
+                                    <div class="linhaDeConteudo">
+                                        <label for="inputLinkedin">LinkedIn:</label>
+                                    </div>
+
+                                    <input type="url" name="link" id="inputLinkedin" class="inputLinkedin" placeholder="www.linkedin.com/in/..." onkeypress="mascaraLinkedin(this);EnterTab('inputEmpregado')" autocomplete="off" />
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="informacoesAdcionais">
+
+                            <p style="font-weight: bold;" class="tema">Informações adcionais</p>
+                            <div class="listaDeInformacoes">
+
+                                <div class="informacoes">
+
+                                    <div class="linhaDeConteudo">
+
+                                        <label for="inputEmpregado">Está empregado atualmente:</label>
+
+                                    </div>
+
+                                    <input list="opcoesEmpregado" id="inputEmpregado" name="inputEmpregado" onkeypress="EnterTab('inputHabilitacao')" />
+                                    <datalist id="opcoesEmpregado">
+
+                                        <option value="Sim">
+                                        <option value="Não">
+
+                                    </datalist>
+
+                                </div>
+
+                                <div class="informacoes">
+
+                                    <div class="linhaDeConteudo">
+
+                                        <label for="inputHabilitacao">Carteira de habilitação:</label>
+
+                                    </div>
+
+                                    <input list="opcoesHabilitacao" id="inputHabilitacao" name="inputHabilitacao" onkeypress="EnterTab('inputAutomovel')" />
+                                    <datalist id="opcoesHabilitacao">
+
+                                        <option value="Não possui">
+                                        <option value="A">
+                                        <option value="AB">
+                                        <option value="AC">
+                                        <option value="AD">
+                                        <option value="AE">
+                                        <option value="B">
+                                        <option value="C">
+                                        <option value="D">
+                                        <option value="E">
+
+                                    </datalist>
+
+                                </div>
+
+                                <div class="informacoes">
+
+                                    <div class="linhaDeConteudo">
+
+                                        <label for="inputAutomovel">Possui automóvel próprio:</label>
+
+                                    </div>
+
+                                    <input list="opcoesAutomovel" id="inputAutomovel" name="inputAutomovel" onkeypress="EnterTab('inputViagens')" />
+                                    <datalist id="opcoesAutomovel">
+
+                                        <option value="Carro">
+                                        <option value="Moto">
+                                        <option value="Não possui">
+
+                                    </datalist>
+
+                                </div>
+
+                                <div class="informacoes">
+
+                                    <div class="linhaDeConteudo">
+
+                                        <label for="inputViagens">Disponibilidade para viagens:</label>
+
+                                    </div>
+
+                                    <input list="opcoesViagens" id="inputViagens" name="inputViagens" onkeypress="EnterTab('inputMudarSe')" />
+                                    <datalist id="opcoesViagens">
+
+                                        <option value="Sim">
+                                        <option value="Não">
+
+                                    </datalist>
+
+                                </div>
+
+                                <div class="informacoes">
+
+                                    <div class="linhaDeConteudo">
+
+                                        <label for="inputMudarSe">Disponibilidade para mudar-se:</label>
+
+                                    </div>
+
+                                    <input list="opcoesMudarSe" id="inputMudarSe" name="inputMudarSe" onkeypress="EnterTab('inputEscolaridade')" />
+                                    <datalist id="opcoesMudarSe">
+
+                                        <option value="Sim">
+                                        <option value="Não">
+
+                                    </datalist>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </form>
+
+            <form class="formacaoEConhecimentos">
+
+                <div class="topicos">
+                    <img src="https://cdn-icons-png.flaticon.com/128/42/42972.png">
+                    <h2>Formação e Conhecimentos</h2>
+                    <div class="camposObrigatorios">
+                        <b style="color: red;">*</b>
+                        <b style="font-style: italic;">Campos obrigatórios</b>
+                    </div>
+                </div>
+                <p style="font-style: italic;" class="informacao">Mostre tudo o que sabe! Informe aqui todo seu conhecimento</p>
+
+                <div class="conteudo">
+
+                    <div class="formacao">
+
+                        <p style="font-weight: bold;" class="tema">Formação</p>
+
+                        <div class="escolaridade">
+
+                            <div class="linhaDeConteudo">
+                                <label for="inputEscolaridade">Escolaridade:</label>
+                                <label for="inputEscolaridade" style="color: red;">*</label>
+                            </div>
+
+                            <input list="opcoesEscolaridade" id="inputEscolaridade" name="inputEscolaridade" onkeypress="grauEscolaridade()" autocomplete="off" />
+                            <datalist id="opcoesEscolaridade">
+
+                                <option value="Analfabeto">
+                                <option value="Ensino fundamental (1º grau) incompleto">
+                                <option value="Ensino fundamental (1º grau) completo">
+                                <option value="Ensino médio (2º grau) incompleto">
+                                <option value="Ensino médio (2º grau) em andamento">
+                                <option value="Ensino médio (2º grau) completo">
+                                <option value="Ensino médio (2º grau) Técnico incompleto">
+                                <option value="Ensino médio (2º grau) Técnico em andamento">
+                                <option value="Ensino médio (2º grau) Técnico completo">
+                                <option value="Técnico incompleto">
+                                <option value="Técnico em andamento">
+                                <option value="Técnico completo">
+                                <option value="Ensino superior (3º grau) incompleto">
+                                <option value="Ensino superior (3º grau) em andamento">
+                                <option value="Ensino superior (3º grau) completo">
+                                <option value="Doutorado incompleto">
+                                <option value="Doutorado em andamento">
+                                <option value="Doutorado completo">
+                                <option value="Mestrado incompleto">
+                                <option value="Mestrado em andamento">
+                                <option value="Mestrado completo">
+                                <option value="Pós-doutorado incompleto">
+                                <option value="Pós-doutorado em andamento">
+                                <option value="Pós-doutorado completo">
+                                <option value="Pós-graduação/Especialização incompleto">
+                                <option value="Pós-graduação/Especialização em andamento">
+                                <option value="Pós-graduação/Especialização completo">
+                                <option value="Pós-graduação/MBA incompleto">
+                                <option value="Pós-graduação/MBA em andamento">
+                                <option value="Pós-graduação/MBA completo">
+
+                            </datalist>
+
+                        </div>
+
+                        <div id="curso" class="curso">
+
+                            <!-- <div class="linhaDeConteudo">
+
+                                <p>Curso:</p>
+                                <p style="color: red;">*</p>
+
+                            </div>
+
+                            <input type="text" class="inputCurso" /> -->
+
+                        </div>
+
+                        <div id="semestre" class="semestre">
+
+                            <!-- <div class="linhaDeConteudo">
+
+                                <p>Semestre:</p>
+                                <p style="color: red;">*</p>
+
+                            </div>
+
+                            <input type="text" class="inputSemestre" />
+                            <b style="font-style: italic;">Ex: 1º, 2º, 3º</b> -->
+
+                        </div>
+
+                        <div id="instituicao" class="instituicao">
+
+                            <!-- <div class="linhaDeConteudo">
+
+                                <p>Instituição:</p>
+                                <p style="color: red;">*</p>
+
+                            </div>
+
+                            <input type="text" class="inputInstituicao" /> -->
+
+                        </div>
+
+                        <div id="duracao" class="duracao">
+
+                            <!-- <div class="linhaDeConteudo">
+
+                                <p>Duração:</p>
+                                <p style="color: red;">*</p>
+
+                            </div>
+
+                            <input type="text" class="inputDuracao" />
+                            <b style="font-style: italic;">Ex: 8 horas, 2 meses, 1 ano</b> -->
+
+                        </div>
+
+                        <div id="conclusao" class="conclusao">
+
+                            <!-- <div class="linhaDeConteudo">
+
+                                <p>Ano de conclusão:</p>
+                                <p style="color: red;">*</p>
+
+                            </div>
+
+                            <input type="number" class="inputConclusao" />
+                            <b style="font-style: italic;">Somente números</b> -->
+
+                        </div>
+
+                    </div>
+
+                    <!-- <div class="cursos">
+
+                        <p style="font-weight: bold;" class="tema">Participaçao em cursos ou eventos</p>
+
+                        <div class="cursoEvento">
+
+                            <div class="linhaDeConteudo">
+
+                                <label for="inputCursoEvento">Curso/Evento:</label>
+
+                            </div>
+
+                            <input type="text" id="inputCursoEvento" class="inputCursoEvento" onkeypress="EnterTab('inputInstituicaoCurso')" />
+
+                        </div>
+
+                        <div class="instituicaoCurso">
+
+                            <div class="linhaDeConteudo">
+
+                                <label for="inputInstituicaoCurso">Instituição:</label>
+
+                            </div>
+
+                            <input type="text" id="inputInstituicaoCurso" class="inputInstituicaoCurso" onkeypress="EnterTab('inputDuracaoCurso')" />
+
+                        </div>
+
+                        <div class="duracaoCurso">
+
+                            <div class="linhaDeConteudo">
+
+                                <label for="inputDuracaoCurso">Duração:</label>
+
+                            </div>
+
+                            <input type="text" id="inputDuracaoCurso" class="inputDuracaoCurso" onkeypress="EnterTab('inputconclusaoCurso')" />
+
+                        </div>
+
+                        <div class="conclusaoCurso">
+
+                            <div class="linhaDeConteudo">
+
+                                <label for="inputconclusaoCurso">Ano de conclusao:</label>
+
+                            </div>
+
+                            <input type="text" id="inputconclusaoCurso" class="inputconclusaoCurso" onkeypress="EnterTab('objetivos')" />
+
+                        </div>
+
+                        </div>
+
+                    </div> -->
+
+                </div>
+
+            </form>
+
+            <form class="objetivosEExperiencias">
+
+                <div class="topicos">
+                    <img src="https://cdn-icons-png.flaticon.com/128/3971/3971341.png">
+                    <h2>Objetivos e experiências</h2>
+                    <div class="camposObrigatorios">
+                        <b style="color: red;">*</b>
+                        <b style="font-style: italic;">Campos obrigatórios</b>
+                    </div>
+                </div>
+
+                <div class="conteudo">
+
+                    <div class="objetivosProfissionais">
+                        <label for="objetivos" style="font-weight: bold;" class="tema">Objetivos Profissionais</label>
+
+                        <textarea name="objetivos" id="objetivos" cols="60" rows="12" class="textarea_padrao" autocomplete="off"></textarea>
+
+                    </div>
+
+                    <div class="miniCurriculo">
+                        <label for="resumo" style="font-weight: bold;" class="tema">Resumo profissional ou Mini-currículo</label>
+
+                        <textarea name="resumo" id="resumo" cols="60" rows="12" class="textarea_padrao" autocomplete="off"></textarea>
+
+                    </div>
+
+                    <!-- <div class="experienciasProfissionais">
+
+                        <h3>Experiências profissionais</h3>
+
+                        <div class="nomeDaEmpresa">
+
+                            <div class="linhaDeConteudo">
+
+                                <label for="inputNomeDaEmpresa">Nome da empresa:</label>
+
+                            </div>
+
+                            <input type="text" id="inputNomeDaEmpresa" />
+
+                        </div>
+
+                        <div class="cargo">
+
+                            <div class="linhaDeConteudo">
+
+                                <label for="inputCargo">Cargo:</label>
+                                
+                            </div>
+
+                            <input type="text" id="inputCargo" />
+
+                        </div>
+
+                        <div class="estadoEmpresa">
+
+                            <div class="linhaDeConteudo">
+
+                                <label for="inputEstadoEmpresa">Estado:</label>
+                                
+                            </div>
+
+                            <input type="text" id="inputEstadoEmpresa" />
+
+                        </div>
+
+                        <div class="cidadeEmpresa">
+
+                            <div class="linhaDeConteudo">
+
+                                <label for="inputCidadeEmpresa">Cidade:</label>
+                                
+                            </div>
+
+                            <input type="text" id="inputCidadeEmpresa" />
+
+                        </div>
+
+                        <div class="periodo">
+                            <h4>Período</h4>
+
+                            <div class="inicio">
+
+                                <div class="linhaDeConteudo">
+
+                                    <label for="inputInicio">Início:</label>
+                                    
+                                </div>
+    
+                                <input type="text" id="inputInicio" />
+
+                            </div>
+
+                            <div class="final">
+
+                                <div class="linhaDeConteudo">
+
+                                    <label for="inputFinal">Final:</label>
+                                    
+                                </div>
+    
+                                <input type="text" id="inputFinal" />
+                                
+                            </div>
+
+                            <div class="atualmente">
+
+                                <input id="inputAtualmente" type="checkbox" />
+
+                                <label for="inputAtualmente">Atualmente trabalho na empresa</label>
+
+                            </div>
+
+                        </div>
+
+                        <div class="atividades">
+
+                            <label for="principaisAtividades">Principais atividades:</label>
+                            <textarea name="principaisAtividades" id="principaisAtividades" cols="60" rows="12" class="textarea_padrao" autocomplete="off"></textarea>
+                        
+                        </div>
+                        
+                        <div id="add1">
+                        </div>
+
+                        <div id="add2">
+                        </div>
+
+                        <div id="add3">
+                        </div>
+
+                        <input type="button" class="inputButton" value="Adicionar + experiências">
+
+                    </div> -->
+
+                </div>
+
+            </form>
+
+        </main>
+
+        <footer>
+            <input type="button" id="inputButton" class="inputButton" value="Salvar">
+            <button id="visualizarCurriculo"><a href="curriculo.html">Visualizar currículo</a></button>
+        </footer>
+
+    </body>
+</html>
